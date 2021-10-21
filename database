@@ -1,0 +1,78 @@
+create database SCHEMAZ;
+use schemaz;
+create table employee
+(employee_num INT(128) AUTO_INCREMENT PRIMARY KEY,
+first_name VARCHAR(48),
+last_name VARCHAR(24),
+middle_name VARCHAR(24)
+);
+
+create table room
+(room_num VARCHAR(48) PRIMARY KEY,
+avail_start TIME,
+avail_end TIME,
+room_class VARCHAR(48)
+);
+
+
+create table schedule
+(schedule_num INT AUTO_INCREMENT PRIMARY KEY,
+year_level_section VARCHAR(16) NOT NULL,
+subject_code VARCHAR(32) NOT NULL,
+s_start_at TIME,
+s_end_at TIME,
+employee_num INT(128),
+room_num VARCHAR(48),
+curriculum_num INT(128) NOT NULL
+);
+
+create table open_sched
+(curriculum_num INT,
+os_start DATETIME,
+os_end DATETIME
+);
+
+create table department
+(dept_num int(48) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+department_id VARCHAR(16),
+department_desc VARCHAR(128));
+
+create table employee_departments
+(employee_num INT(128),
+department_id VARCHAR(16));
+
+create table approved
+(
+approved_num INT AUTO_INCREMENT PRIMARY KEY,
+year_level_section VARCHAR(16) NOT NULL,
+curriculum_num INT(128) NOT NULL
+);
+
+CREATE TABLE users(
+idUsers int(48) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+uidUsers TINYTEXT NOT NULL,
+pwdUsers LONGTEXT NOT NULL,
+department_id VARCHAR(16),
+level_access TINYTEXT NOT NULL);
+
+CREATE TABLE subjects(
+subject_code VARCHAR(32) PRIMARY KEY,
+subject_desc VARCHAR(48),
+department_id VARCHAR(16));
+
+CREATE TABLE curriculum(
+curriculum_num INT AUTO_INCREMENT PRIMARY KEY,
+academic_year VARCHAR(12) NOT NULL,
+semester VARCHAR(16) NOT NULL);
+
+CREATE TABLE schedule_days
+(schedule_num int,
+day_code VARCHAR(2));
+
+CREATE TABLE room_days
+(room_num VARCHAR(48),
+day_code VARCHAR(2));
+
+CREATE TABLE day
+(day_code VARCHAR(2),
+day_desc VARCHAR(16));

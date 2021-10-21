@@ -1,0 +1,95 @@
+$(document).ready(function() {
+    $('#checkboxes').on('change',function(){
+        var favorite = [];
+        var sched_num = document.getElementById("subject").value;
+        var start = document.getElementById("time_start").value;
+        var end = document.getElementById("time_end").value;
+        $.each($("input[name='day']:checked"), function(){
+            favorite.push($(this).val());
+        });
+        $.ajax({
+          type: 'POST',
+          url: 'includes/new_load_rooms.inc.php',
+          data: { day: favorite, sched_num: sched_num, start: start, end: end },
+          success:function(html){
+            $('#rooms').html(html);
+          }
+        });
+    });
+});
+$(document).ready(function() {
+    $('#checkboxes').on('change',function(){
+        var favorite = [];
+        var sched_num = document.getElementById("subject").value;
+        var start = document.getElementById("time_start").value;
+        var end = document.getElementById("time_end").value;
+        $.each($("input[name='day']:checked"), function(){
+            favorite.push($(this).val());
+        });
+        $.ajax({
+          type: 'POST',
+          url: 'includes/new_load_rooms.inc.php',
+          data: { day: favorite, sched_num: sched_num, start: start, end: end },
+          success:function(html){
+            $('#rooms').html(html);
+          }
+        });
+    });
+});
+$(document).ready(function() {
+    $('#checkboxes').on('change',function(){
+        var favorite = [];
+        var sched_num = document.getElementById("subject").value;
+        var start = document.getElementById("time_start").value;
+        var end = document.getElementById("time_end").value;
+        $.each($("input[name='day']:checked"), function(){
+            favorite.push($(this).val());
+        });
+        $.ajax({
+          type: 'POST',
+          url: 'includes/new_load_rooms.inc.php',
+          data: { day: favorite, sched_num: sched_num, start: start, end: end },
+          success:function(html){
+            $('#rooms').html(html);
+          }
+        });
+    });
+});
+$(document).ready(function() {
+    $('#checkboxes').on('change',function(){
+        var favorite = [];
+        var sched_num = document.getElementById("subject").value;
+        var start = document.getElementById("time_start").value;
+        var end = document.getElementById("time_end").value;
+        $.each($("input[name='day']:checked"), function(){
+            favorite.push($(this).val());
+        });
+        $.ajax({
+          type: 'POST',
+          url: 'includes/new_load_rooms.inc.php',
+          data: { day: favorite, sched_num: sched_num, start: start, end: end },
+          success:function(html){
+            $('#rooms').html(html);
+          }
+        });
+    });
+});
+$(document).ready(function() {
+    $('#checkboxes').on('change',function(){
+        var favorite = [];
+        var sched_num = document.getElementById("subject").value;
+        var start = document.getElementById("time_start").value;
+        var end = document.getElementById("time_end").value;
+        $.each($("input[name='day']:checked"), function(){
+            favorite.push($(this).val());
+        });
+        $.ajax({
+          type: 'POST',
+          url: 'includes/new_load_rooms.inc.php',
+          data: { day: favorite, sched_num: sched_num, start: start, end: end },
+          success:function(html){
+            $('#rooms').html(html);
+          }
+        });
+    });
+});

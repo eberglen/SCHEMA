@@ -1,0 +1,21 @@
+load_sections.inc.php
+load_professors.inc.php
+new_load_profs.inc.php
+update_schedule.php
+schedule.php
+#change department_id
+
+DATABASE CONNECTION
+mysqldib.inc.php
+dbconn.inc.php
+dbh.inc.php
+
+$sql = "SELECT COUNT(*)
+        FROM listings
+        WHERE l_end > '$date_today'
+        AND category_num > 10
+        AND category_num < 20;";
+$result = mysqli_query($conn, $sql);
+while($row = mysqli_fetch_assoc($result)) {
+  $cat1 = $row['COUNT(*)'];
+}
